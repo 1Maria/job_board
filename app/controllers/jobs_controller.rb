@@ -10,8 +10,12 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(job_params)
-    redirect_to jobs_path
+    @job = Job.create(job_params)
+    if @job.save
+      redirect_to jobs_path, notice: 'Job was successfully created.'
+    else
+      render json: @job.errors, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -19,9 +23,12 @@ class JobsController < ApplicationController
   end
 
   def update
-    @job = Job.find(params[:id])
-    @job.update_attributes(job_params)
-    redirect_to jobs_path
+    if @job.update(job_params)
+      render :show, status: :ok, location: @job
+    else
+      render json: @job.errors, status: :unprocessable_entity
+    end
+    #redirect_to jobs_path
   end
 
   def destroy
