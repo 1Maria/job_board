@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Description</th>
       <th>Location</th>
+      <th>Company</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><strong><%= job.title %></strong></td>
         <td><%= job.description %></td>
         <td><%= job.location %></td>
+        <td><%= job.company %></td>
         <td><%= link_to 'Show', job_path(job) %></td>
       </tr>
     <% end %>
