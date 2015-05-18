@@ -9,8 +9,6 @@
       <th>Description</th>
       <th>Location</th>
       <th>Company</th>
-      <th>Level</th>
-      <th>Qualifications</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,8 +20,6 @@
         <td><%= job.description %></td>
         <td><%= job.location %></td>
         <td><%= job.company %></td>
-        <td><%= job.level %></td>
-        <td><%- job.qualifications %></td>
         <td><%= link_to 'Show', job_path(job) %></td>
       </tr>
     <% end %>
