@@ -10,6 +10,26 @@
   <%= @job.description %>
 </p>
 
+<p>
+  <strong>Location:</strong>
+  <%= @job.location %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @job.company %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @job.level %>
+</p>
+
+<p>
+  <strong>Qualifications:</strong>
+  <%= @job.qualifications %>
+</p>
+
 <h5><%= link_to 'Edit Posting', edit_job_path(@job)%></h5>
 <h5><%= link_to 'Delete Posting', @job, method: :delete %></h5>
 <h5><%= link_to 'Back', jobs_path %></h5>
