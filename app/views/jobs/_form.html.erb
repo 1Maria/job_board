@@ -1,31 +1,31 @@
 <%= form_for(@job) do |f| %>
-  <div class="form">
-    <div>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </div>
-    <div>
-      <%= f.label :description %>
-      <%= f.text_area :description, size: '60x6' %>
-    </div>
-    <div>
-      <%= f.label :location %>
-      <%= f.text_field :location %>
-    </div>
-    <div>
-      <%= f.label :company %>
-      <%= f.text_field :company %>
-    </div>
-    <div>
-      <%= f.label :level %>
-      <%= f.text_field :level %>
-    </div>
-    <div>
-      <%= f.label :qualifications %>
-      <%= f.text_area :qualifications %>
-    </div>
-    <div>
-      <%= f.submit %>
-    </div>
-  </div>
+  <table>
+      <tr>
+        <th> <%= f.label :title %> </th>
+        <th> <%= f.text_field :title %> </th>
+      </tr>
+      <tr>
+        <th> <%= f.label :description %> </th>
+        <th> <%= f.text_area :description, size: '60x6' %> </th>
+      </tr>
+      <tr>
+        <th> <%= f.label :location %> </th>
+        <th> <%= f.text_field :location %> </th>
+      </tr>
+      <tr>
+        <th> <%= f.label :company %> </th>
+        <th> <%= f.text_field :company %> </th>
+      </tr>
+      <tr>
+        <th> <%= f.label :level %> </th>
+        <th> <%= f.text_field :level %> </th>
+      </tr>
+      <tr>
+        <th> <%= f.label :qualifications %> </th>
+        <th> <%= f.text_area :qualifications %> </th>
+      </tr>
+      <tr>
+        <th> <%= f.submit %> </th> 
+      </tr>
+  </table>
 <% end %>
